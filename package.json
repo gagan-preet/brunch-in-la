@@ -1,0 +1,21 @@
+{
+  "name": "Brunch-in-LA",
+  "version": "0.0.1",
+  "description": "Brunch for LiveScript and AngularJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "LiveScript",
+    "AngularJS"
+  ],
+  "author": "Gagan Preet Singh <s.gagan.preet@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "brunch": "^1.8.2"
+  },
+  "dependencies": {
+    "LiveScript-brunch": "^1.6.0"
+  }
+}
