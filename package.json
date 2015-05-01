@@ -21,7 +21,9 @@
     "auto-reload-brunch": "^1.7.8",
     "clean-css-brunch": "^1.7.2",
     "css-brunch": "^1.7.0",
+    "jade-brunch": "^1.8.1",
     "javascript-brunch": "^1.7.1",
+    "static-jade-brunch": "^1.7.0",
     "uglify-js-brunch": "^1.7.8"
   }
 }
