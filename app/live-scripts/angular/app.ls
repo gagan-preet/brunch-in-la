@@ -20,19 +20,19 @@ angular.module \ng-app
   ($routeProvider, $locationProvider, config) !->
     $routeProvider.when \/login, {
       controller:'LoginController as login',
-      templateUrl: \login.html }
+      templateUrl: \views/login.html }
     .when \/home, {
       controller:'HomeController as home',
-      templateUrl: \home.html }
-    .when \/home, {
-      controller:'HomeController as home',
-      templateUrl: \home.html }
+      templateUrl: \views/home.html }
+    .when \/register, {
+      controller:'RegisterController as register',
+      templateUrl: \views/register.html }
     .when '/chat/:friendId', {
       controller:'ChatController as chat',
       templateUrl:\chat.html }
     .when \/, {
       controller:'HomeController as home',
-      templateUrl: \home.html }
+      templateUrl: \views/home.html }
     .otherwise {
       redirectTo: \/login }
     $locationProvider.html5Mode false
