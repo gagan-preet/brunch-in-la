@@ -3,11 +3,12 @@ doctype html
 html(ng-app="ng-app")
   head
     meta(charset="utf-8")
-    title
-      AngularJS Basic HTTP Authentication Example
-    link(rel="stylesheet", href="css/vendor.css")
-    script(src="js/vendor.js")
-
+    title ng-App in LiveScript and Jade Template Engine
+    link(rel="stylesheet", href="/css/vendor.css")
+    script(src="/js/vendor.js")
+    script(src="/js/app.js")
+    script(src="/tpl/app.js")
+    // base(href="/")
   body
     .jumbotron
       .container
@@ -15,9 +16,4 @@ html(ng-app="ng-app")
           div(ng-view)
     .credits.text-center
       p
-        a(href="http://jasonwatmore.com/post/2014/05/26/AngularJS-Basic-HTTP-Authentication-Example.aspx")
-          AngularJS Basic HTTP Authentication Example
-      p
-        a(href="http://jasonwatmore.com")
-          JasonWatmore.com
-    script(src="js/app.js")
+        a(href="https://bitbucket.org/gagan_preet/brunch-in-la/src") BitBucket Development

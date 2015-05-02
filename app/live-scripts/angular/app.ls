@@ -7,8 +7,9 @@
 #           mgcrea.ngStrap
 # Returns: Angular module with the following-
 #            Routing configuration
-#              Default: /login
+#              Default: /
 #              /login - LoginController and /login.html
+#              /register - RedisterController and /register
 #              /home - HomeController and /home.html
 #              /chat:friendId - ChatController and /chat.html
 #            baseURL
@@ -19,22 +20,25 @@ angular.module \ng-app
 .config [ \$routeProvider \$locationProvider
   ($routeProvider, $locationProvider, config) !->
     $routeProvider.when \/login, {
-      controller:'LoginController as login',
+      controller:\LoginController,
+      controllerAs: \login,
       templateUrl: \views/login.html }
     .when \/home, {
-      controller:'HomeController as home',
+      controller:\HomeController,
+      controllerAs: \home,
       templateUrl: \views/home.html }
     .when \/register, {
-      controller:'RegisterController as register',
+      controller:\RegisterController,
+      controllerAs: \register,
       templateUrl: \views/register.html }
     .when '/chat/:friendId', {
-      controller:'ChatController as chat',
+      controller:\ChatController,
+      controllerAs: \chat,
       templateUrl:\chat.html }
     .when \/, {
-      controller:'HomeController as home',
-      templateUrl: \views/home.html }
+      redirectTo: \/home }
     .otherwise {
-      redirectTo: \/login }
+      redirectTo: \/register }
     $locationProvider.html5Mode false
 ]
 .run [ \$rootScope \$location \$cookieStore \$http
@@ -43,7 +47,7 @@ angular.module \ng-app
     if ($rootScope.globals.currentUser)
       $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata
     $rootScope.$on \$locationChangeStart, (event, next, current) ->
-      restrictedPage = $.inArray $location.path(), <[ \/login /register ]> === -1
+      restrictedPage = if $.inArray $location.path(), <[ \/login /register ]> === -1 then false else true
       loggedIn = $rootScope.globals.currentUser
       if (restrictedPage && !loggedIn)
         $location.path \/login
