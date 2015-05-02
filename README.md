@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This is an attempt to make my stack with [https://angularjs.org/ AngularJS]
-using the [http://brunch.io/ Brunch] as a build tool and [http://livescript.net/
-LiveScript] and [http://jade-lang.com/ Jade] as compile-to/templating languages.
+This is an attempt to make my stack with [AngularJS](https://angularjs.org/)
+using the [Brunch](http://brunch.io/) as a build tool and [LiveScript]
+(http://livescript.net/) and [Jade](http://jade-lang.com/) as compile-to/templating languages.
 
 The setup has an existing client-side implementation of the authentication
 engine.
